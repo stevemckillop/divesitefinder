@@ -1,0 +1,22 @@
+{
+  "name": "soloproject",
+  "version": "1.0.0",
+  "description": "np# soloproject first solo API project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevemckillop/soloproject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stevemckillop/soloproject/issues"
+  },
+  "homepage": "https://github.com/stevemckillop/soloproject#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
