@@ -1,0 +1,20 @@
+{
+    "divesites": [ 
+        {
+            "name": "Manta Point",
+            "common sealife": ["reef manta rays", "bamboo shark", "stingray", "mantis shrimp", "squid"] 
+        },
+        {
+            "name": "Crystal Bay",
+            "common sealife": ["mola-mola", "reef sharks", "barracuda", "frogfish", "sweetlips"] 
+        },
+        {
+            "name": "SD Point",
+            "common sealife": ["batfish", "titan triggerfish", "napoleon wrasse", "giant moray eel"] 
+        },
+        {
+            "name": "Toyopekah",
+            "common sealife": ["mola-mola", "thresher shark", "bannerfish", "yellow jackfish"] 
+        }
+    ]
+}
