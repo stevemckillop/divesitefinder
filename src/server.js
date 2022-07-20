@@ -33,7 +33,7 @@ const setupServer = () => {
         let pic = `./fishpics/${getName}.jpg`
         res.send(`./fishpics/${getName}.jpg`).status(200);
     })
-    app.get("/api/ishigaki/:name", (req, res) => {
+    app.get("/api/divesites/ishigaki/:name", (req, res) => {
         let getName = req.params.name;
         console.log(getName);
         const findDiveSite = (obj) =>{
@@ -43,7 +43,7 @@ const setupServer = () => {
         let diveSiteReturn = ishigaki[diveSite];
         res.send(diveSiteReturn).status(200);
     })
-    app.get("/api/penida/:name", (req, res) => {
+    app.get("/api/divesites/penida/:name", (req, res) => {
         let getName = req.params.name;
         console.log(getName);
         const findDiveSite = (obj) =>{
@@ -53,6 +53,24 @@ const setupServer = () => {
         let diveSiteReturn = penida[diveSite];
         res.send(diveSiteReturn).status(200);
     })
+
+    app.post("/api/divesites/ishigaki/", (req, res) => {
+        const newDiveSite = req.body;
+        if (!newDiveSite.name) {
+          res.status(400).send("Dive Site must contain a name");
+        }
+        ishigaki.push(newDiveSite);
+        res.status(201).end();
+      });
+      
+    app.post("/api/divesites/penida/", (req, res) => {
+        const newDiveSite = req.body;
+        if (!newDiveSite.name) {
+          res.status(400).send("Dive Site must contain a name");
+        }
+        penida.push(newDiveSite);
+        res.status(201).end();
+      });
   
   return app;
   };
