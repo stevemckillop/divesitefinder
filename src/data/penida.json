@@ -1,19 +1,19 @@
 {
     "penida": [ 
         {
-            "name": "Manta Point",
+            "name": "manta_point",
             "common sealife": ["reef manta rays", "bamboo shark", "stingray", "mantis shrimp", "squid"] 
         },
         {
-            "name": "Crystal Bay",
+            "name": "crystal_bay",
             "common sealife": ["mola-mola", "reef sharks", "barracuda", "frogfish", "sweetlips"] 
         },
         {
-            "name": "SD Point",
+            "name": "sd_point",
             "common sealife": ["batfish", "titan triggerfish", "napoleon wrasse", "giant moray eel"] 
         },
         {
-            "name": "Toyopekah",
+            "name": "toyopekah",
             "common sealife": ["mola-mola", "thresher shark", "bannerfish", "yellow jackfish"] 
         }
     ]

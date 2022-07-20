@@ -1,19 +1,19 @@
 {
     "ishigaki": [ 
         {
-            "name": "Kabira Bay",
+            "name": "kabira_bay",
             "common sealife": ["reef manta rays", "green turtles", "clarks anemonefish", "parrotfish", "sea snakes"] 
         },
         {
-            "name": "Oosaki",
+            "name": "oosaki",
             "common sealife": ["sea snakes", "green turtles", "trumpetfish", "parrotfish", "clownfish", "cuttlefish"] 
         },
         {
-            "name": "Taketomi",
+            "name": "taketomi",
             "common sealife": ["cuttlefish", "garden eels", "electric clams", "yellow fusiliers"] 
         },
         {
-            "name": "Panari",
+            "name": "panari",
             "common sealife": ["reef manta rays", "green turtles", "white tip reef shark", "giant trevally"] 
         }
     ]
