@@ -10,7 +10,7 @@ require("dotenv").config({
         directory: __dirname + "/db/migrations"
       },
      seeds: {
-        directory: "./db/seeds"
+        directory: "db/seeds"
       }
   
   };

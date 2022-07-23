@@ -53,14 +53,12 @@ const setupServer = () => {
 
     app.post("/api/divesites/", async (req, res) => {
         const newDiveSite = req.body;
-        console.log(newDiveSite);
-        // if (!newDiveSite.name) {
-        //   res.status(400).send("Dive Site must contain a name");
-        // }
+        console.log(newDiveSite)
         try {
             await db("dive_sites")
                 .insert({
-                    name: newDiveSite.name
+                    name: newDiveSite.name,
+                    location: newDiveSite.location,
                 })
                 res.status(204).end();
         } catch (err) {
@@ -71,32 +69,16 @@ const setupServer = () => {
       app.post("/api/sealife/", async (req, res) => {
         const newSeaLife = req.body;
         console.log(newSeaLife);
-        if (!newSeaLife) {
-          res.status(400).send("SeaLife must contain a name");
-        }
         try {
-            await db("divesites")
+            await db("sea_life")
                 .insert({
-                    name: divesites.name,
-                    location: divesites.location,
-                    sealife: divesites.sealife,
+                    name: newSeaLife.name,
                 })
                 res.status(204).end();
         } catch (err) {
             res.send(err).status(404);
         }
-        divesites.push(newDiveSite);
-        res.status(201).end();
       });
-
-    //   app.patch("/api/sealife", async (req, res) => {
-    //     console.log(req.params);
-
-
-    //     try {
-
-    //     }
-    //   })
   
   return app;
   };
