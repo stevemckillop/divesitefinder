@@ -1,5 +1,6 @@
 const diveData = require("./data");
 const { divesites, sealife } = diveData;
+const db = require("../db/knex.js")
 
 const express = require("express");
 
@@ -52,15 +53,33 @@ const setupServer = () => {
 
     app.post("/api/divesites/", async (req, res) => {
         const newDiveSite = req.body;
-        if (!newDiveSite.name) {
-          res.status(400).send("Dive Site must contain a name");
+        console.log(newDiveSite);
+        // if (!newDiveSite.name) {
+        //   res.status(400).send("Dive Site must contain a name");
+        // }
+        try {
+            await db("dive_sites")
+                .insert({
+                    name: newDiveSite.name
+                })
+                res.status(204).end();
+        } catch (err) {
+            res.send(err).status(404);
+        }
+      });
+
+      app.post("/api/sealife/", async (req, res) => {
+        const newSeaLife = req.body;
+        console.log(newSeaLife);
+        if (!newSeaLife) {
+          res.status(400).send("SeaLife must contain a name");
         }
         try {
             await db("divesites")
                 .insert({
                     name: divesites.name,
                     location: divesites.location,
-                    sealife: sealife,
+                    sealife: divesites.sealife,
                 })
                 res.status(204).end();
         } catch (err) {
@@ -70,6 +89,14 @@ const setupServer = () => {
         res.status(201).end();
       });
 
+    //   app.patch("/api/sealife", async (req, res) => {
+    //     console.log(req.params);
+
+
+    //     try {
+
+    //     }
+    //   })
   
   return app;
   };

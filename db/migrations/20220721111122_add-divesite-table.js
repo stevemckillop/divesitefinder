@@ -3,7 +3,7 @@
  * @returns { Promise<void> }
  */
 exports.up = async function(knex) {
-    await knex.schema.createTable("diveSites", (table)=> {
+    await knex.schema.createTable("dive_sites", (table)=> {
         table.increments("id");
         table.string("name", 255)
             .unique()
@@ -18,5 +18,5 @@ exports.up = async function(knex) {
  */
 exports.down = async function(knex) {
   return await knex.schema
-    .dropTable("diveSites")
+    .dropTable("dive_sites")
 };
