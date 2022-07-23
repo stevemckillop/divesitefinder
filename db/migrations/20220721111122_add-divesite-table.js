@@ -17,6 +17,6 @@ exports.up = async function(knex) {
  * @returns { Promise<void> }
  */
 exports.down = async function(knex) {
-  return knex.schema
-    .dropTable("diveSites");
+  return await knex.schema
+    .dropTable("diveSites")
 };
