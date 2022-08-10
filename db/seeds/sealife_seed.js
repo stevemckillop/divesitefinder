@@ -3,36 +3,34 @@
  * @returns { Promise<void> }
  */
  exports.seed = async function (knex) {
-    await knex("dive_sites").del();
-    await knex("dive_sites").insert([
-            "reef manta ray",
-            "white tip reef shark",
-            "green turtle",
-            "sea snake", 
-            "clarks anemonefish",
-            "parrotfish", 
-            "trumpetfish", 
-            "clownfish", 
-            "cuttlefish",
-            "garden eel",
-            "electric clam",
-            "yellow fusilier", 
-            "white tip reef shark",
-            "giant trevally",
-            "bamboo shark", 
-            "blue spotted stingray", 
-            "mantis shrimp", 
-            "squid", 
-            "mola-mola (ocean sunfish)", 
-            "reef shark", 
-            "barracuda", 
-            "frogfish", 
-            "sweetlips", 
-            "titan triggerfish", 
-            "napolean wrasse", 
-            "giant moray eel", 
-            "thresher shark", 
-            "bannerfish", 
-            "yellow jackfish"
-        ])
+    await knex("sea_life").del();
+    await knex("sea_life").insert([
+            {name: "reef manta ray"},
+            {name: "white tip reef shark"},
+            {name: "green turtle"},
+            {name: "sea snake"}, 
+            {name: "clarks anemonefish"},
+            {name: "parrotfish"}, 
+            {name: "trumpetfish"}, 
+            {name: "cuttlefish"},
+            {name: "garden eel"},
+            {name: "electric clam"},
+            {name: "yellow fusilier"}, 
+            {name: "giant trevally"},
+            {name: "bamboo shark"}, 
+            {name: "blue spotted stingray"}, 
+            {name: "mantis shrimp"}, 
+            {name: "squid"}, 
+            {name: "mola-mola (ocean sunfish)"}, 
+            {name: "reef shark"}, 
+            {name: "barracuda"}, 
+            {name: "frogfish"}, 
+            {name: "sweetlips"}, 
+            {name: "titan triggerfish"}, 
+            {name: "napolean wrasse"}, 
+            {name: "giant moray eel"}, 
+            {name: "thresher shark"}, 
+            {name: "bannerfish"}, 
+            {name: "yellow jackfish"}
+    ])
  };

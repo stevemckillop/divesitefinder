@@ -45,10 +45,11 @@ const setupServer = () => {
     app.get("/api/divesites/location/:location", (req, res) => {
         let getLocation = req.params.location;
         console.log(getLocation)
-        let location = divesites.filter(obj => {
+        let thisLocation = divesites.filter(obj => {
             return obj.location === getLocation;
         })
-        res.send(location).status(200);
+        console.log(thisLocation)
+        res.send(thisLocation).status(200);
     })
 
     app.post("/api/divesites/", async (req, res) => {
