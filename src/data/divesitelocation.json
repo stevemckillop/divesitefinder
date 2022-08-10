@@ -2,43 +2,43 @@
     "divesites": [ 
         {
             "name": "manta_point",
-            "latitude": "24.488369679690315",
-            "longitude": "124.11843126359881"
+            "latitude": 24.488369679690315,
+            "longitude": 124.11843126359881
         },
         {
             "name": "crystal_bay",
-            "latitude": "-8.715547",
-            "longitude": "115.457598"
+            "latitude": -8.715547,
+            "longitude": 115.457598
         },
         {
             "name": "sd_point",
-            "latitude": "-8.67546392515072",
-            "longitude": "115.52196408596828"
+            "latitude": -8.67546392515072,
+            "longitude": 115.52196408596828
         },
         {
             "name": "toyopekah",
-            "latitude": "-8.667204609255307",
-            "longitude": "115.49997086055697"
+            "latitude": -8.667204609255307,
+            "longitude": 115.49997086055697
         },
         {
             "name": "kabira_bay",
-            "latitude": "24.488369679690315",
-            "longitude": "124.11843126359881"
+            "latitude": 24.488369679690315,
+            "longitude": 124.11843126359881
         },
         {
             "name": "oosaki",
-            "latitude": "24.423015351386827",
-            "longitude": "124.07582657166513" 
+            "latitude": 24.423015351386827,
+            "longitude": 124.07582657166513 
         },
         {
             "name": "taketomi",
-            "latitude": "24.342653",
-            "longitude": "124.084040"
+            "latitude": 24.342653,
+            "longitude": 124.084040
         },
         {
             "name": "panari",
-            "latitude": "24.213061510757136",
-            "longitude": "123.94144105931528" 
+            "latitude": 24.213061510757136,
+            "longitude": 123.94144105931528 
         }
     ]
 }
