@@ -1,4 +1,5 @@
-const diveData = require("./data");
+const path = require("path");
+const diveData = require("./client/src/data");
 const { divesites, sealife } = diveData;
 const db = require("../db/knex.js")
 
@@ -7,6 +8,10 @@ const express = require("express");
 const setupServer = () => {
     const app = express();
     app.use(express.json());
+
+    app.use(express.static(path.resolve(__dirname, "client", "build")));
+
+    console.log(path.join(__dirname, "client", "build"));
   
     app.get("/hello", (req, res) => {
       res.send("Hello world").status(200);
@@ -83,5 +88,5 @@ const setupServer = () => {
   
   return app;
   };
-  
+  setupServer();
   module.exports = { setupServer };
