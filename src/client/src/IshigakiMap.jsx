@@ -16,7 +16,7 @@ export default function IshigakiMap () {
     
   if (!isLoaded) return <div>Loading...</div>
   return (
-     <div><Map/></div>
+     <div>Hello</div>
     );
   };
 

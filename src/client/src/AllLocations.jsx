@@ -1,16 +1,16 @@
 import React from "react";
+import AllSeaLife from "./AllSeaLife";
 import "./styles/AllLocations.css"
 
 export default function AllLocations(props) {
 
-  const { allLocations, setSelectedLocation, setShowAllLocations } = props;
 
 
   return (
     <div>
-      {allLocations.map((location) => {
+      {props.allLocations.map((location) => {
         return (
-          <div class="containter"onClick={()=> {setSelectedLocation(location); setShowAllLocations(false);}}>
+          <div class="containter"onClick={()=> {props.setSelectedLocation(location); props.setShowAllLocations(false);}}>
             <h1>Explore {location.name}, {location.country}</h1>
             <div class="entryPhoto">
               <img src={location.photoURL} alt={location.name}></img>
@@ -18,6 +18,7 @@ export default function AllLocations(props) {
           </div>
         )
       })}
+      <AllSeaLife />
     </div>
   )
 }

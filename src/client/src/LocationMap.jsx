@@ -1,14 +1,18 @@
 import React from 'react'
+import ishigakimap from "./data/photos/ishigakimap.jpeg"
+import penidamap from "./data/photos/penidamap.jpeg"
 
 
 export default function LocationMap (props) {
-  const {name, country, mapPhoto, map} = props.selectedLocation
+  const {name, country, mapPhoto} = props.selectedLocation
   return (
     <div>
       <h1>THIS IS A MAP OF {name}, {country} </h1>
-      <div>{map}</div>
-      <img src="./data/photos/ishigakimap.jpg" alt={name}></img>
-      
+      {name=="Ishigaki" ? <img src={ishigakimap} alt={mapPhoto} /> :
+      <img src={penidamap} alt={mapPhoto} />
+    }
     </div>
   )
 }
+
+//needs to scale 
