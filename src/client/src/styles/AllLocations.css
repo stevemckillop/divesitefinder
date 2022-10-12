@@ -4,6 +4,13 @@
     text-align: center;
     font-weight: bold;
     font-size: 20pix;
+    border: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.entryPhoto{
+    width: 500px;
+    height: auto;
 }
 
 

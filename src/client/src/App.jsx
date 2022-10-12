@@ -63,10 +63,18 @@ function App() {
             <AllLocations allLocations={allLocations} setSelectedLocation={setSelectedLocation} setShowAllLocations={setShowAllLocations}/> : 
             <SingleLocation selectedLocation={selectedLocation} setSelectedLocation={setSelectedLocation} setShowAllLocations={setShowAllLocations} />
         }
-      </div>
+        </div>
       : 
-      <AllSeaLife />
+      <div>
+        <h1> All Sea Life</h1>
+        <AllSeaLife />
+      </div>
       } 
+
+      {/* <div>
+        <IshigakiMap />
+      </div> */}
+
       <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

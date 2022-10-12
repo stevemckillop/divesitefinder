@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
+import IshigakiMap from "./IshigakiMap"
 
 
 
@@ -22,14 +23,42 @@ function AllSeaLife () {
         .then(function (response) {
           setData(response.data);
         })
-        console.log(typeof data);
-        console.log(Array.isArray(data));
-        console.log(data);
       }, []);
 
 
     return (  
         <div className="SeaLife">
+            <Carousel autoPlay interval="3200" transitionTime="3200" infiniteLoop> 
+                    <div>
+                        <img src={images['parrotfish.jpeg']} />
+                        <p className="legend">Parrotfish</p>
+                    </div>
+                    <div>
+                        <img src={images['reefmantaray.jpeg']} />
+                        <p className="legend">Reef Manta Ray</p>
+                    </div>
+                    <div>
+                        <img src={images['whitetipreefshark.jpeg']} />
+                        <p className="legend">White Tip Reef Shark</p>
+                    </div>
+                    <div>
+                        <img src={images['green-sea-turtle.jpeg']} />
+                        <p className="legend">Green Sea Turtle</p>
+                    </div>
+                    <div>
+                        <img src={images['sea-snake.jpeg']} />
+                        <p className="legend">Sea Snake</p>
+                    </div>
+                    <div>
+                        <img src={images['clarksaenemonefish.jpeg']} />
+                        <p className="legend">Clark's Anemone Fish</p>
+                    </div>
+                    <div>
+                        <img src={images['trumpetfish.jpeg']} />
+                        <p className="legend">Trumpetfish</p>
+                    </div>
+            </Carousel>
+
             {data ? data.map(site => {
                 return (
                 <>
@@ -40,16 +69,6 @@ function AllSeaLife () {
                 )
             }) : 
             <> </>}
-        <Carousel autoPlay interval="5000" transitionTime="5000" infiniteLoop> 
-                    <div>
-                        <img src={images['parrotfish.jpeg']} />
-                        <p className="legend">Parrotfish</p>
-                    </div>
-                    <div>
-                        <img src={images['reefmantaray.jpeg']} />
-                        <p className="legend">Reef Manta Ray</p>
-                    </div>
-        </Carousel>
 
         </div>
     )
